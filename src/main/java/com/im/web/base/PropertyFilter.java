@@ -15,7 +15,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.util.Assert;
 
 /**
  * 与具体ORM实现无关的属性过滤条件封装类, 主要记录页面中简单的搜索过滤条件.
@@ -80,10 +79,10 @@ public class PropertyFilter {
 		}
 
 		String propertyNameStr = StringUtils.substringAfter(filterName, "_");
-		Assert.isTrue(StringUtils.isNotBlank(propertyNameStr), "filter名称" + filterName + "没有按规则编写,无法得到属性名称.");
+//		Assert.isTrue(StringUtils.isNotBlank(propertyNameStr), "filter名称" + filterName + "没有按规则编写,无法得到属性名称.");
 		propertyNames = StringUtils.splitByWholeSeparator(propertyNameStr, PropertyFilter.OR_SEPARATOR);
 
-		this.matchValue = ConvertUtils.convertStringToObject(value, propertyClass);
+//		this.matchValue = ConvertUtils.convertStringToObject(value, propertyClass);
 	}
 
 	/**
@@ -155,7 +154,7 @@ public class PropertyFilter {
 	 * 获取唯一的比较属性名称.
 	 */
 	public String getPropertyName() {
-		Assert.isTrue(propertyNames.length == 1, "There are not only one property in this filter.");
+//		Assert.isTrue(propertyNames.length == 1, "There are not only one property in this filter.");
 		return propertyNames[0];
 	}
 

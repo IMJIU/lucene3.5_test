@@ -17,7 +17,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.util.Assert;
 
 /**
  * Http与Servlet工具类.
@@ -146,7 +145,7 @@ public class ServletUtils {
 	 */
 	@SuppressWarnings("unchecked")
 	public static Map<String, Object> getParametersStartingWith(ServletRequest request, String prefix) {
-		Assert.notNull(request, "Request must not be null");
+//		Assert.notNull(request, "Request must not be null");
 		Enumeration paramNames = request.getParameterNames();
 		Map<String, Object> params = new TreeMap<String, Object>();
 		if (prefix == null) {

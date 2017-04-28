@@ -5,9 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -45,7 +43,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public class DateUtil {
     
-    private static final Log log = LogFactory.getLog(DateUtil.class);
+    private static final org.slf4j.Logger log = LoggerFactory.getLogger(DateUtil.class);
     
     private static String defaultPattern = "yyyy-MM-dd";
     /**
